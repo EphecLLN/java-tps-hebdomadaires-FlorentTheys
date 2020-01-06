@@ -1,0 +1,75 @@
+/**
+* Cette méthode vérifie si un nombre est pair
+* @param a : un nombre entier quelconque
+* @return true : si le nombre est pair
+* @return false : si le nombre est impair
+*/
+public int isEven(int a){
+	if (a % 2 == 0){
+	return true;
+	}
+	else{
+	return false;
+	}
+}
+
+/**
+* calcule le périmètre d'un carrée en multipliant son coté fois 4
+* @param n : un nombre positif correspond à la longueur du coté du carrée
+* @return un nombre étant le résultat de la multiplication de n par 4
+*/
+public double getSquarePerimeter(double n) {
+	if(n >= 0) {
+		return n * 4;
+	} else {
+		systeme.out.println("Entrez un nombre positif");
+	}
+}
+
+/**
+* Vérifie si un caractère fait partie de la chaine de caractères données.
+* @param str : chaine de caractère à vérifier
+* @param chr: caractère dont il faut vérifier la présence
+* @return true si le caractère se trouve dans la chaine de caractère
+* @return false si le caractère ne se trouve pas dans la chaine de caractère
+*/
+public boolean checkCharInString(String str, char chr) {
+	if (str.contains(chr)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+TEST isEven
+
+Reçue	Attendu
+-----	-------
+0	true
+1	false
+2	true
+-1	false
+-2	true
+
+TEST	getSquarePerimeter
+
+Reçue	Attendu
+-----	--------	
+0	0
+0,5	2
+3	12
+-2	-1
+
+TEST checkCharInString
+
+Reçue			Attendu
+------			--------
+"Salut alpha66", "a"	true
+"Salut alpha66", "6"	true
+"Salut alpha66", "s"	false
+"Salut alpha66","S"	true
+"Salut alpha66", "e"	false
+"Salut alpha66", "9"	false
+"123456", "t"		false
+"123456", "3"		true
+"123456", "7"		false
